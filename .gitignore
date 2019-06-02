@@ -1,4 +1,5 @@
 node_modules/
 *.txt
-*.json
 playground/
+notes-app/notes.json
+.env
