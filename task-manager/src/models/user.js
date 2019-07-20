@@ -48,6 +48,8 @@ const userSchema = new mongoose.Schema({
             required: true
         }
     }]
+}, {
+    timestamps: true
 });
 
 userSchema.virtual('tasks', {
@@ -61,14 +63,18 @@ userSchema.methods.toJSON = function () {
         _id,
         age,
         name,
-        email
+        email,
+        createdAt,
+        updatedAt
     } = this;
 
     return {
         _id,
         age,
         name,
-        email
+        email,
+        createdAt,
+        updatedAt
     };
 };
 
